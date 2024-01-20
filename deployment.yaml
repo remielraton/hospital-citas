@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: citas-hospital-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: citas-hospital
+  template:
+    metadata:
+      labels:
+        app: citas-hospital
+    spec:
+      containers:
+      - name: citas-hospital
+        image: citas-hospital:1.0
+        ports:
+        - containerPort: 5000

@@ -1,0 +1,48 @@
+<!-- app/templates/citas.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital XYZ - Citas Previas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Hospital XYZ - Citas Previas</h1>
+    </header>
+    
+    <table id="tablaCitas">
+        <thead>
+            <tr>
+                <th>Especialidad</th>
+                <th>Nombre</th>
+                <th>DNI</th>
+                <th>Dirección</th>
+                <th>Número de Seguro Médico</th>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for cita in citas %}
+                <tr>
+                    <td>{{ cita.especialidad }}</td>
+                    <td>{{ cita.nombre }}</td>
+                    <td>{{ cita.dni }}</td>
+                    <td>{{ cita.direccion }}</td>
+                    <td>{{ cita.seguro }}</td>
+                    <td>{{ cita.fecha }}</td>
+                    <td>{{ cita.hora }}</td>
+                    <td>
+                        <button onclick="eliminarCita('{{ cita.dni }}')">Eliminar</button>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <button onclick="goBack()">Regresar</button>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
