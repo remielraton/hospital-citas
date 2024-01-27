@@ -15,7 +15,7 @@ Descripción detallada del proyecto.
 
 ## Instalación
 
-1. Clona el repositorio: `git clone https://github.com/tu-usuario/nombre-del-proyecto.git`
+1. Clona el repositorio: `git clone https://github.com/remielraton/hospital-citas.git`
 2. Crea un entorno virtual: `python -m venv venv`
 3. Activa el entorno virtual:
     - En Windows: `venv\Scripts\activate`
@@ -30,14 +30,3 @@ Descripción detallada del proyecto.
 2. Ejecuta la aplicación: `python app.py`
 3. Abre tu navegador y visita [http://localhost:5000](http://localhost:5000)
 
-## Uso
-
-Descripción de cómo utilizar la aplicación.
-
-## Contribuciones
-
-¡Contribuciones son bienvenidas! Lee [CONTRIBUTING.md](docs/CONTRIBUTING.md) para obtener más detalles.
-
-## Licencia
-
-Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo [LICENSE.md](LICENSE.md) para obtener más detalles.
